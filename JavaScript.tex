@@ -1,0 +1,122 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\parindent=0cm %Modificar tamaño de sangria
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,latexsym,cancel}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{longtable}
+\newcolumntype{E}{>{$}c<{$}}
+\setcounter{MaxMatrixCols}{40}
+\usepackage{bm}
+\usepackage{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%PAQUETES O CONFIGURACION NUEVA%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[lmargin=2cm, rmargin=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}%%Es para limpiar el documento
+\fancyhead[C]{Titulo de nuestro articulo}
+\fancyhead[R]{\includegraphics[scale=0.07]{figuras/logo}}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{Bryan Ricardo}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\vspace*{2\baselineskip}%%saltos de linea
+\hrule height 3pt
+\vspace*{0.5\baselineskip}%%saltos de linea
+{\Huge \textbf{Universidad Autonoma de Aguascalientes}}
+{\Large \textbf{LICENCIATURA EN MATEMATICAS APLICADAS}}
+\vspace*{0.5\baselineskip}%%saltos de linea
+\hrule
+\vspace*{0.5\baselineskip}%%saltos de linea
+\includegraphics[scale=0.5]{figuras/logo}
+\vspace*{2\baselineskip} \\%%saltos de linea
+\textbf{\large MATERIA: Java Script} \\
+\vspace*{1.5\baselineskip}
+\textbf{\large Docente: Bryan Ricardo Barbosa Olvera} \\
+\vspace*{1.5\baselineskip}
+\textbf{\large FECHA DE CREACION: 18 de Junio de 2022} \\  
+\vspace*{3\baselineskip}
+\includegraphics[scale=0.5]{figuras/imagen}
+\vfill
+BRYAN RICARDO BARBOSA OLVERA \\
+\today \\
+
+\end{center}
+\end{titlepage}
+
+\section{POO}
+\subsection{Crear Objetos}
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ 
+\subsection{Acceder a los valores}
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+console.log(producto.nombre);\\
+\subsection{Agregar O Eliminar valores} 
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+//Agregar  nuevas propiedades \\
+producto.imagen = "imagen.jpg"; \\
+//ELiminar propiedades del objeto \\
+delete producto.precio \\
+\subsection{Destructuring} 
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+//Crea y asigna el valor a la variable \\
+const {nombre, precio} = producto; \\
+console.log(nombre,precio);\\
+\subsection{Destructuring de objetos anidados} 
+const producto = $ \{ $ \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\ informacion: $ \{ $ \\
+fabricacion:  $ \{ $ \\ pais: 'CHina' \\ $ \} \} \}$  \\
+const $\{ $ nombre, informacion , informacion : $ \{ $ fabricacion: $ \{ $pais $ \} \} \} = $ producto;\\
+console.log(pais);\\
+\newpage
+\subsection{Conjelar un objeto} 
+$ " $use strict $ " $ \\
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+//Al conjelar el objeto no deja que se le agregen o eliminen valores del objeto \\
+Object.freeze(producto);\\
+//el siguiente comando indica con un true si esta conjelado el objeto\\
+console.log(Object.isFrozen(producto));\\
+\subsection{Sellar un objeto}
+$ " $use strict $ " $ \\
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+//Al sellar un objeto es parecido a conjelarlo con la diferencia que le permite cambiar el valor de las llaves \\
+Object.seal(producto);\\
+producto.precio = 200; \\
+//el siguiente comando indica con un true si esta sellado el objeto\\
+console.log(Object.isSealed(producto));\\
+\subsection{Spread Operator o Rest Operator}
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+const medidas $ = \{ $ \\ peso: '1kg', \\ medida: '1m' \\ $ \} $ \\
+//Lo que realiza es unir dos objetos en uno solo \\
+const resultado = $ \{ $ ...producto , ...medidas  $ \} $ \\
+\subsection{La palabra reservada this}
+//Te permite no perder la referencia de la varable que se esta llamando y no tomar variables fuera del objeto
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  ,mostrarInfo: function $ \left(  \right) \{$ \\
+console.log(`EL producto tiene como nombre: $ \$ \{ $ this.nombre  $ \} $`) $ \} $ \\ $ \} $ \\ 
+\newpage
+\subsection{.keys .values .entries} 
+const producto  $ = \{ $  \\ nombre: "Monitor 20 pulgadas", \\ precio: 300, \\  $ \} $ \\ 
+//.keys te retorna las llaves del objeto en un objeto \\
+console.log(Object.keys(producto)); \\
+//.values te retorna los valores del objeto en un objeto \\
+console.log(Object.values(producto)); \\
+//.entries te retorna las llaves y los valores del objeto en pares en  un objeto \\
+console.log(Object.entries(producto)); \\
+
+\newpage
+\section{ARRAYS}
+\subsection{.keys .values .entries} 
+
+
+\end{document}
