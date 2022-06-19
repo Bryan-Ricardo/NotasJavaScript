@@ -116,7 +116,67 @@ console.log(Object.entries(producto)); \\
 
 \newpage
 \section{ARRAYS}
-\subsection{.keys .values .entries} 
+\subsection{Crear un arreglo} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+\subsection{Acceder a los valores de un arreglo} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+console.log(meses[0]);
+//Lo siguiente es para acceder al valor de un arreglo dentro de otro arreglo\\
+const todo = [1,[1,2]]; \\
+console.log(todo[1][1]); \\
+//Observece que imprimira el valor 2\\
+\subsection{Longitud de un arreglo}  
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+console.log(meses.length); \\
+//Observese que retornara como valor 7\\
+\subsection{Agregar un valor nuevo en un arreglo}
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+//Observamos que el arreglo solo tiene 7 valores, en el cual se puede acceder en la posicion6 \\
+//Para agregar uno nuevo es de la siguiente manera: \\
+meses[7] = 'Nuevo mes'; \\
+\subsection{Agregar elementos con el spreed operator al inicio o final} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+let mesesNuevo = [...meses, 'Junio']; \\
+mesesNuevo = ['Diciembre' , ...mesesNuevo]; \\
+\subsection{Eliminar un valor al principio del arreglo} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+meses.shift(); \\
+\subsection{Eliminar un valor al final del arreglo} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+meses.pop(); \\
+\subsection{Eliminar un valor en cualquier posicion del arreglo} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+meses.splice(1,1); \\
+//Elimina febrero \\
+meses.splice(posicion donde empesara a borrar valores , cantidad de valores que se quieren eliminar); \\
+
+\newpage
+\subsection{destructuring con Arreglos} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+const [vEnero, vFebrero] = meses;\\
+console.log(vFebrero); \\
+//Observemos que crea la variable vFebrereo con el valor febrero no necesariamente con el mismo nombre \\
+const [, vFebrero] = meses;\\
+console.log(vFebrero); \\
+//Observemos que crea la variable vFebrereo pero dejamos un espacio para indicar que no queremos crear una variable inecesaria\\
+const [, vFebrero,...mesesFaltantes] = meses;\\
+console.log(mesesFaltantes); \\
+//meses Faltantes obtendra un arreglo con todos los valores que no se asignaron\\
+
+\subsection{Iterarcon Arreglos con .forEach} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+meses.forEach((producto) $ \{ $ \\ 
+console.log(producto); \\ 
+$\} $ )\\
+\subsection{Iterarcon Arreglos con .map} 
+const meses = ['Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio']; \\
+meses.map((producto) $ \{ $ \\ 
+console.log(producto); \\ 
+$\} $ )\\
+//Realiza lo mismo que el forEach pero el map crea un nuevo arreglo\\
+
+\newpage
+\section{FUNCIONES}
 
 
 \end{document}
