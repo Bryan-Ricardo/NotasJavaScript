@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.16)  22 JUN 2022 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.16)  22 JUN 2022 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,6 +818,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 360--365
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
+
+ []
+
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
 Package pdftex.def Info: figuras/logo.png  used on input line 369.
@@ -830,7 +835,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-18.86467pt}.
 
-[12] (./JavaScript.aux
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 371--382
+
+ []
+
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 383.
+(pdftex.def)             Requested size: 49.96173pt x 27.26463pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 30.86467pt, for example:
+(fancyhdr)                \setlength{\headheight}{30.86467pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-18.86467pt}.
+
+[13] (./JavaScript.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
@@ -848,10 +870,10 @@ s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 /cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1
 440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on JavaScript.pdf (13 pages, 282560 bytes).
+Output written on JavaScript.pdf (14 pages, 283694 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
