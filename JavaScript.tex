@@ -373,11 +373,78 @@ const enlace = document.createElement('a');\\
 enlace.textContent = 'Nuevo Enlace'; \\
 enlace.href = '/nuevo-enlace';\\
 const navegacion = document.querySelector('.navegacion'); \\
-navegacion.appendChild(enlace); \\
+navegacion.appendChild(enlace); q\\
 //Agrega un nuevo hijo a la navegacion al final \\
 navegacion.insertBefore(enlace, navegacion.children[1] ); \\
 //El .insertBefore es para agergarle un nuevo hijo pero especificando en que lugar se encontrara el nuevo hijo\\
 enlace.onclick = miFuncion; \\
 //.onclick sirve para cuando se le da click al enlace \\
+
+\newpage
+\section{Eventos en JavaScript}
+\subsection{Detectar cuando el html esta listo}
+document.addEventListener('DOMContentLoaded', ()=> $ \{ $ \\ 
+console.log('Documento Listo');  \\
+$ \} $); \\
+
+\subsection{Eventos con el mouse}
+const nav = document.addEventListener('.navegacion'); \\
+document.addEventListener('click', ()=> $ \{ $ \\ 
+console.log('Click en nav');  \\
+$ \} $); \\
+//Se ejecuta cuando se da click \\
+document.addEventListener('mouseenter', ()=> $ \{ $ \\ 
+console.log('ENtrando a la nevegacion');  \\
+$ \} $); \\
+//Se ejecuta cuando se pasa por encima \\
+document.addEventListener('mouseout', ()=> $ \{ $ \\ 
+console.log('Saliendo de la navegacion');  \\
+$ \} $); \\
+//Se ejecuta cuando se sale del elemento \\
+document.addEventListener('mouseup', ()=> $ \{ $ \\ 
+console.log('Se presiono y se solto');  \\
+$ \} $); \\
+//Se ejecuta cuando se da click pero cuando se le suelta de dar el click \\
+document.addEventListener('dblclick', ()=> $ \{ $ \\ 
+console.log('Se presiono y se solto');  \\
+$ \} $); \\
+//Se ejecuta cuando se da doble click \\
+
+\subsection{Eventos sobre los inputs}
+const nav = document.addEventListener('.busqueda'); \\
+nav.addEventListener('keydown', ()=> $ \{ $ \\ 
+console.log('Escribiendo...');  \\
+$ \} $); \\
+//Se ejecuta cuando se presiona una tecla \\
+nav.addEventListener('keyup', ()=> $ \{ $ \\ 
+console.log('Escribiendo...');  \\
+$ \} $); \\
+//Se ejecuta cuando se presiona peros se suelta esa tecla \\
+nav.addEventListener('blur', ()=> $ \{ $ \\ 
+console.log('Escribiendo...');  \\
+$ \} $); \\
+//Se ejecuta cuando estas en el input pero te sales \\
+nav.addEventListener('copy', ()=> $ \{ $ \\ 
+console.log('copiando texto');  \\
+$ \} $); \\
+//Se ejecuta cuando se copia un texto \\
+nav.addEventListener('paste', ()=> $ \{ $ \\ 
+console.log('pegando texto');  \\
+$ \} $); \\
+//Se ejecuta cuando se pega un texto \\
+nav.addEventListener('cut', ()=> $ \{ $ \\ 
+console.log('pegando texto');  \\
+$ \} $); \\
+//Se ejecuta cuando se corta un texto \\
+nav.addEventListener('input', ()=> $ \{ $ \\ 
+console.log('pegando texto');  \\
+$ \} $); \\
+//Se ejecuta cuando se realiza todo lo anterior con excepcion el bur\\
+\subsection{Saber mas sobre el evento}
+nav.addEventListener('input', (e)=> $ \{ $ \\ 
+console.log(e.target.value);  \\
+$ \} $); \\
+//Te da todo lo que el usuario esta escribiendo\\
+
 
 \end{document}
